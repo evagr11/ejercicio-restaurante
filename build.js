@@ -17,12 +17,9 @@ if (!fs.existsSync('./dist')) {
     fs.mkdirSync('./dist');
 }
 const menuTemplate = './views/menu.njk';
-const aboutTemplate = './views/about.njk';
 nunjucks.configure("views",{ autoescape: true });
 
 createHTMLFile(menuTemplate, { menu }, './dist/index.html');
-createHTMLFile(menuTemplate, { menu }, './dist/menu.html');
-createHTMLFile(aboutTemplate, {}, './dist/about.html');
 
 
 const cssFile = 'style.css';
